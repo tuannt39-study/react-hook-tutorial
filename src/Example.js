@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Example() {
-  // Khai báo 1 biến số đếm, gọi là "count"
   const [count, setCount] = useState(0);
+
+  // Giống componentDidMount và componentDidUpdate:
+  useEffect(() => {
+    // Cập nhật tiêu đề trang web sử dụng API trình duyệt
+    document.title = `Bạn đã bấm ${count} lần`;
+  });
 
   // Khai báo nhiều biến trạng thái!
   // const [age, setAge] = useState(42);
